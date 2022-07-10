@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Makaut YGPA Calculator</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="brand-logo"></div>
+  <div class="brand-title">Makaut YGPA Calculator</div>
+  <div class="inputs">
+    <label><strong>Credit Points</strong> Earned</label>
+    <input type="text" id="firstNumber" placeholder="Credit Points of (Odd+Even) Semester" required/>
+    <label>Total <strong>Credits</strong> in Current Year</label>
+    <input type="text" id="secondNumber" placeholder="Enter sum of credits for both semester" required/>
+    <button type="button" onClick="multiplyBy()" Value="Multiply" >CHECK YGPA</button>
+  </div>
+  <p>The YGPA result is : <span id = "result"></span></p>
+</div>
+<!-- script -->
+<script>
+    function multiplyBy()
+    {
+      num1 = document.getElementById(
+        "firstNumber").value;
+      num2 = document.getElementById(
+        "secondNumber").value;
+        if(num1&&num2){
+            total = (parseFloat(num1)/parseFloat(num2));
+            if(total<=10){
+                document.getElementById("result").innerHTML = total.toFixed(2); //for upto 2 decimal
+            }
+            else{
+                alert("YGPA must be less than or equal to 10");
+            }
+        }
+        else{
+            alert("Please check the details you have entered\nAll fields are required.");
+        }
+     
+    }
+  </script>
+</body>
+</html>
