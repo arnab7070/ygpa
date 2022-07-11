@@ -26,7 +26,7 @@ body {
   padding: 40px;
   box-sizing: border-box;
   background: #ffffff;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
 }
 
 .brand-logo {
